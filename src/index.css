@@ -87,7 +87,7 @@ audio,
 video {
   margin: 0;
   padding: 0;
-  border: 0;
+  /* border: 0; */
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -136,6 +136,7 @@ table {
 * {
   box-sizing: border-box;
   max-width: 100%;
+  border: 1px solid pink;
 }
 
 html {
@@ -150,7 +151,6 @@ body {
   font-family: sans-serif;
   background-image: url("./images/sw-bg.jpg");
   background-size: cover;
-  border: 1px solid pink;
 }
 
 h1 {
