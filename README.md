@@ -81,6 +81,13 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+   React JS is a javascript library that allows us to build user interfaces. It solves the cumbersome problem of having to use javascript to interact with the DOM. React lets us use pseudo html (JSX) to return elements to the DOM and write javascript logic for those elements all in the same file. It helps to compartmentalize the markup, style, and logic of small components on a larger web application in one place.
+
 1. Describe component state.
+   Component state is a slice of what the UI looks like when some specific data is the state data. State contains the data that tells the component to change its UI based on an interaction that changes said data. When the state data changes, the component re-renders based on what change was made to the desired UI that accompanies that change.
+
 1. Describe props.
+   props are data, passed as arguments (they look like html attributes) from one component to another, typically to a child component. They allow different components to share necessary data in order to describe what should be renderd on the screen.
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+   Side effects are anything that has an effect on something, AND is outside of the scope of the function being executed. UseEffect is how side effects are synced in React components. UseEffect takes two arguments: a callback function (that is to be the side effect itself), and a dependency array where state variable can be stored. When the state variable(s) in the dependecy array change and a re-render is triggered, the callback fires.
