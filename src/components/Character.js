@@ -5,15 +5,13 @@ import styled from "styled-components";
 const StyledCharacter = styled.div``;
 
 export default function Character(props) {
-  //   const { characterData } = props;
+  const { characterData } = props;
   return (
     <StyledCharacter className="character">
-      <h2>name</h2>
-      <p>birth_year</p>
-      <p>height</p>
-      <p>mass</p>
-      <p>homeworld</p>
-      <p>species</p>
+      <h2>{characterData.name}</h2>
+      <p>Birth-Year: {characterData.birth_year}</p>
+      <p>Height: {characterData.height}</p>
+      <p>Mass: {characterData.mass}</p>
     </StyledCharacter>
   );
 }
