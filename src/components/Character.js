@@ -1,6 +1,7 @@
 // Write your Character component here
 import React from "react";
 import styled from "styled-components";
+import CharacterDetail from "./CharacterDetail";
 
 const StyledCharacter = styled.div`
   color: #443e3e;
@@ -46,10 +47,7 @@ export default function Character(props) {
         <h2>{characterData.name}</h2>
         <p>Birth-Year: {characterData.birth_year}</p>
       </div>
-      <div className="details-container">
-        <p className="height">Height: {characterData.height}</p>
-        <p>Mass: {characterData.mass}</p>
-      </div>
+      <CharacterDetail characterData={characterData} />
     </StyledCharacter>
   );
 }
