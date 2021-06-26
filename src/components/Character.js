@@ -11,7 +11,7 @@ const StyledCharacter = styled.div`
   border: 2px solid #2ff924;
   border-radius: 10px;
 
-  div {
+  .name-year-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,10 +32,6 @@ const StyledCharacter = styled.div`
     border: 1px solid whitesmoke;
     border-radius: 5px;
     background-color: #696969;
-  }
-
-  .height {
-    margin-left: 3%;
   }
 `;
 
