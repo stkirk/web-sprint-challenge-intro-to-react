@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import styled from "styled-components";
+import Character from "./components/Character";
 
 const baseUrl = "https://swapi.dev/api/people";
 
-const StyledCharacters = styled.section`
+const StyledCharactersSection = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -33,7 +34,9 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      <StyledCharacters className="main-section"></StyledCharacters>
+      <StyledCharactersSection className="characters-section">
+        <Character characterData={characterData} />
+      </StyledCharactersSection>
     </div>
   );
 };
