@@ -1,5 +1,5 @@
 // Write your Character component here
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import CharacterDetail from "./CharacterDetail";
 
@@ -37,13 +37,20 @@ const StyledCharacter = styled.div`
 
 export default function Character(props) {
   const { characterData } = props;
+
+  const [detailView, setDetailView] = useState(false);
+
+  const toggleDetailView = () => {
+    setDetailView(!detailView);
+  };
+
   return (
     <StyledCharacter className="character">
       <div className="name-year-container">
         <h2>{characterData.name}</h2>
         <p>Birth-Year: {characterData.birth_year}</p>
       </div>
-      <CharacterDetail characterData={characterData} />
+      {detailView && <CharacterDetail characterData={characterData} />}
     </StyledCharacter>
   );
 }
