@@ -35,8 +35,16 @@ const StyledCharacter = styled.div`
     background-color: #696969;
   }
   .toggle-icon {
+    font-weight: bold;
     width: 10%;
     margin: 0 auto;
+    &:hover {
+      background-color: whitesmoke;
+      color: #696969;
+      border: 1px solid #696969;
+      transition: all 0.35s ease-in-out;
+    }
+    transition: all 0.35s ease-in-out;
   }
 `;
 
@@ -55,9 +63,9 @@ export default function Character(props) {
         <h2>{characterData.name}</h2>
         <p>Birth-Year: {characterData.birth_year}</p>
       </div>
-      <div className="toggle-icon" onClick={toggleDetailView}>
+      <button className="toggle-icon" onClick={toggleDetailView}>
         {detailView ? "-" : "+"}
-      </div>
+      </button>
       {detailView && <CharacterDetail characterData={characterData} />}
     </StyledCharacter>
   );
