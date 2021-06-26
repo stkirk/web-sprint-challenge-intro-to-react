@@ -8,7 +8,7 @@ const baseUrl = "https://swapi.dev/api/people";
 
 const StyledCharactersSection = styled.section`
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-evenly;
   align-content: space-evenly;
 `;
