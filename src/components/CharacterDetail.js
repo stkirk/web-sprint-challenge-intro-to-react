@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+//all imports needed at top
 
+//created a styled component to wrap each CharacterDetail
 const StyledDetail = styled.div`
   div {
     display: flex;
@@ -17,6 +19,8 @@ const StyledDetail = styled.div`
   }
 `;
 
+//component uses props passed down from Character to render information specific to each character
+//could break down into sub components to avoid repetition but ran out of time
 export default function CharacterDetail(props) {
   const { characterData } = props;
   return (

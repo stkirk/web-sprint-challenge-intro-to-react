@@ -2,7 +2,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import CharacterDetail from "./CharacterDetail";
+//All imports for Character component
 
+//create styled-component for the div that wraps the Character component
+//styles not coming from CSS reset and CSS base styles in App.css are added here
 const StyledCharacter = styled.div`
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
@@ -48,15 +51,22 @@ const StyledCharacter = styled.div`
   }
 `;
 
+//Each character gets a characterData object as props
 export default function Character(props) {
   const { characterData } = props;
 
+  //new slice of state to toggle the CharacterDetail component on and off
   const [detailView, setDetailView] = useState(false);
 
+  //helper function to be used as a click handler
   const toggleDetailView = () => {
     setDetailView(!detailView);
   };
 
+  //returns a Character component with name and birth year showing from props
+  //logic included to toggle the Detail component on and off using detailView slice of state
+  //the click handler on the button it the helper function above and sets detailView state to the opposite of what it currently is
+  //ternary switched button text to be + or - depending on if CharacterDetail is open of closed
   return (
     <StyledCharacter className="character">
       <div className="name-year-container">
